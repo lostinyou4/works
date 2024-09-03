@@ -1,0 +1,107 @@
+@import './reset.css';
+@import './common.css';
+
+header {position: fixed; inset: 1.25rem 1.5% auto; z-index: 9999; display: flex; justify-content: space-between; align-items: center; padding: 1.35rem 1.875rem; border: 1px solid #39442b33; border-radius: .5rem; background: #fdfdf1; font-family: "Space Mono"}
+header h1 a {display: block; width: 8.37rem;}
+header h1 a  svg {width: 100%;}
+.header-right .pc-show{display: flex; align-items: center; gap: 0 1.75rem;}
+.nav-list {display: flex; gap: 0 1.75rem;}
+.nav-list > li a {position: relative; padding-bottom: .4rem; font-weight: 700; font-size: .875rem; color: #39442b;}
+.nav-list > li a:before {
+    content:''; position: absolute; bottom: 0; width: 100%; height: 1.5px; background: #39442b; 
+    transform: scaleX(0);
+    transform-origin:right;
+    
+    transition: transform cubic-bezier(0.12, 0, 0.39, 0) 0.2s;
+} 
+.nav-list > li:hover a:before {transform-origin: left;
+transform: scaleX(1);}
+.link-go {overflow: hidden; position: relative; display: flex; gap: 0 11px; align-items: center; padding: 15px 30px; border: 1px solid; border-radius: 100vw; font-weight: 600; font-size: .875rem; color: #39442b;}
+.link-go .link-go-text-box,
+.link-go i {transition-property: color; transition-duration: .4s; transition-timing-function: cubic-bezier(.165,.84,.44,1); transform-style: preserve-3d;}
+header .link-go i svg:last-child{position: relative; left: -100%;}
+.link-go:hover .link-go-text-box,
+.link-go:hover i {color: #fafe86;}
+.link-go i {overflow: hidden; display: block; width: 15px; height: 15px;}
+.link-go-text-box {overflow: hidden; height: 23px;}
+.link-go-text {display: block;}
+.link-go-bg {position: absolute; inset:0; z-index: -1; background: #39442b;}
+
+.mo-menu {font-size: 13px;}
+
+footer {overflow: hidden; padding-top: 7.5rem; padding-bottom: 3rem; background: #39442b;}
+footer h2 {max-width: 8.375rem; margin: 0 auto;}
+footer h2 svg {color: #fdfdf1;}
+footer nav {padding: 4rem 0 2.6rem;}
+.msubscribe-nav {display: flex; justify-content: center; gap: 0 2.5rem;}
+.msubscribe-nav > li a {display: block; overflow: hidden; height: 39px; font-family: "PP Editorial New"; font-weight: 200; font-size: 2rem; color: #fdfdf1; transition: color .4s cubic-bezier(.165,.84,.44,1);}
+.msubscribe-nav > li a:hover {color: #fafe86;}
+.msubscribe-nav-text {display: block; line-height: 1.1;}
+
+.msubscribe-form {max-width: 33.33%; margin: 0 auto 6rem;}
+.msubscript-email {width: 100%; height: 38px; padding: 1.25rem 0; background: transparent; border-bottom: 1px solid #ccc; font-weight: 600; font-size: 14px; color: #fff; outline: none;}
+.msubscript-email::placeholder {color: #999999;}
+.msubscript-email::-ms-input-placeholder {color: #999999;}
+.msubscribe-btn-subs {overflow: hidden; position: relative; display: flex; gap: 0 11px; align-items: center;  justify-content: center; width: 100%; padding: 17px 31px; background: #fdfdf1; border-radius: 100vw; font-family: "Space Mono", monospace; font-weight: 600; font-size: 16px; text-transform: uppercase; letter-spacing: .1em;}
+.msubscribe-btn-subs i {width: 14px; height: 14px; overflow: hidden;}
+.msubscribe-btn-subs i svg {width: 100%; height: 100%;}
+.msubscribe-btn-subs i svg:last-child {position: relative; left: -100%;}
+.msubscribe-form .msubscribe-btn-subs {margin-top: 1.25rem;}
+.msubscribe-btn-subs-bg {position: absolute; inset: 0; z-index: 0; background: #fafe86;}
+.msubscribe-btn-subs-text-box,
+.msubscribe-btn-subs i {z-index: 1;}
+.msubscribe-btn-subs-text-box {overflow: hidden; height: 18px;}
+.msubscribe-btn-subs-text {display: block; line-height: 1.1;}
+
+.mo-menu-dim {position: fixed; inset: 0; z-index: 99999; display: flex; justify-content: flex-end; height: 100vh; background-color: #39442b66;}
+.mo-menu-wrap {width: 90%; padding: 60px 20px ; background-color: #fdfdf1; border-top-left-radius: 20px; border-bottom-left-radius: 20px; font-family: "Space Mono", monospace; font-weight: 600; font-size: 12px;}
+.mo-menu-wrap svg {width: 100%;}
+
+.mo-menu-wrap {position: relative;}
+.mo-menu-wrap .close-box {padding-bottom: 40px;}
+.mo-menu-wrap .btn-close {display: inline-block;}
+.mo-menu-wrap .menu-list {border-top: 1px solid #39442b;}
+.mo-menu-wrap .menu-list > li {border-bottom: 1px solid #39442b;}
+.mo-menu-wrap .menu-list a {display: flex; justify-content: space-between; align-items: center; padding: 25px 0;}
+.mo-menu-wrap .menu-list a i {display: block; width: 13px;}
+.mo-menu-wrap .link-go {position: absolute; inset: auto 20px 20px; justify-content: center; font-size: 12px;}
+.mo-menu-wrap .link-go i {width: 12px; height: 12px;}
+.mo-menu-wrap .link-go-text-box {height: 18px;}
+.mo-menu-wrap .badge {position: absolute; top: 60%; right: -75px; z-index: 0; }
+.mo-menu-wrap .badge > svg {width: 150px; height: 155px;}
+.mo-menu-wrap .badge-border {animation-name: loop; animation-duration: 10s; animation-iteration-count: infinite; animation-timing-function: linear;}
+.mo-menu-wrap .badge-center {position: absolute; inset:0;}
+
+@keyframes loop {
+    0% {
+    transform: rotate(0);
+    }
+    100% {
+    transform: rotate(360deg);
+    }
+}
+
+footer .mmarquee h3 {opacity: .2;}
+footer .mmarquee h3:hover {color: #fafe86; opacity: 1;}
+.mfooter {margin-top: 1rem; font-family: "Space Mono", monospace; font-weight: 700; font-size: 15px;}
+.mfooter .inner {display: flex; justify-content: space-between; padding-top: 12px; border-top: 1px solid; color: #fdfdf1}
+.mfooter-privacy {text-transform: uppercase;}
+
+@media (max-width: 1280px){
+    .header-right .pc-show {display: none;}
+    .header-right .mo-show {display: block;}
+}
+
+@media (max-width: 768px){
+    header h1 a {width: 122px;}
+    footer {padding: 110px 0 43px;}
+    footer nav {padding: 58px 0 37px;}
+    footer h2 {max-width: 122px;}
+
+    .msubscribe-nav {flex-direction: column; gap: 36px 0; align-items: center;}
+    .msubscribe-nav > li a {height: 23px; font-size: 24px;}
+    .msubscribe-form {margin-bottom: 87px; max-width: 50%;}
+    .msubscribe-form .msubscribe-btn-subs {padding: 13px 25px; font-size: 12px;}
+    .msubscribe-btn-subs-text-box {height: 13px;}
+    .mfooter {font-size: 13px;}
+}

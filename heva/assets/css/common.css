@@ -1,0 +1,87 @@
+/* https://www.onlinewebfonts.com/download/a4ea302c99b5ba55e6778c730de81ebd */
+@font-face {
+    font-family: "Neue Haas Grotesk Text Pro 55 Roman";
+    src: url("https://db.onlinewebfonts.com/t/a4ea302c99b5ba55e6778c730de81ebd.eot");
+    src: url("https://db.onlinewebfonts.com/t/a4ea302c99b5ba55e6778c730de81ebd.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/a4ea302c99b5ba55e6778c730de81ebd.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/a4ea302c99b5ba55e6778c730de81ebd.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/a4ea302c99b5ba55e6778c730de81ebd.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/a4ea302c99b5ba55e6778c730de81ebd.svg#Neue Haas Grotesk Text Pro 55 Roman")format("svg");
+}
+
+/* https://www.onlinewebfonts.com/download/926fcaaa8b66e0df67e176f329259711 */
+/* font-family: "PP Editorial New"; */
+@font-face {
+    font-family: "PP Editorial New";
+    font-weight: 100;
+    src: url("https://db.onlinewebfonts.com/t/23ed6ab5114b3c4b57abae46cf8a5029.eot");
+    src: url("https://db.onlinewebfonts.com/t/23ed6ab5114b3c4b57abae46cf8a5029.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/23ed6ab5114b3c4b57abae46cf8a5029.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/23ed6ab5114b3c4b57abae46cf8a5029.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/23ed6ab5114b3c4b57abae46cf8a5029.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/23ed6ab5114b3c4b57abae46cf8a5029.svg#PP Editorial New Ultralight")format("svg");
+}
+@font-face {
+    font-family: "PP Editorial New";
+    font-weight: 900;
+    src: url("https://db.onlinewebfonts.com/t/254dadc58832a185e06e7370881d13e2.eot");
+    src: url("https://db.onlinewebfonts.com/t/254dadc58832a185e06e7370881d13e2.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/254dadc58832a185e06e7370881d13e2.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/254dadc58832a185e06e7370881d13e2.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/254dadc58832a185e06e7370881d13e2.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/254dadc58832a185e06e7370881d13e2.svg#PP Editorial New Ultrabold")format("svg");
+}
+@font-face {
+    font-family: "PP Editorial New";
+    font-style: italic;
+    src: url("https://db.onlinewebfonts.com/t/926fcaaa8b66e0df67e176f329259711.eot");
+    src: url("https://db.onlinewebfonts.com/t/926fcaaa8b66e0df67e176f329259711.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/926fcaaa8b66e0df67e176f329259711.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/926fcaaa8b66e0df67e176f329259711.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/926fcaaa8b66e0df67e176f329259711.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/926fcaaa8b66e0df67e176f329259711.svg#PP Editorial New")format("svg");
+}
+
+html{
+    font-size: 1.125rem;
+}
+body{
+    font-family: 'Neue Haas Grotesk Display Pro', sans-serif;
+}
+::selection{
+    background: #E5E586;
+    color: #39442B;
+}
+::-webkit-scrollbar {
+    -ms-overflow-style: none;
+    display: none;
+    overflow: -moz-scrollbars-none;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.blind{
+    position: absolute;
+    width: 1px; height: 1px;
+    overflow: hidden;
+    margin: -1px;
+    clip: rect(0,0,0,0);
+
+}
+
+.text-center {text-align: center;}
+.text-right {text-align: right;}
+.italic{font-style: italic; font-weight: 200;}
+.spaceMono{font-family: "Space Mono", monospace;}
+
+.inner {width: 88.8%; max-width: 115rem; position: relative; margin: 0 auto;}
+.mo-show {display: none;}
+
+@media (max-width: 1280px){
+    
+}
+@media (max-width: 768px){
+    .pc-show{display: none;}
+    .mo-show{display: block;}
+}

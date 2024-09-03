@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+
+    <!-- https://www.onlinewebfonts.com/download/a4ea302c99b5ba55e6778c730de81ebd -->
+    <link href="https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro" rel="stylesheet">
+
+    <!-- fonts.google - Space Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+    <script src="
+https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js
+"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/splitting/dist/splitting.min.js"></script>
+    <script src="https://unpkg.com/split-type"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.22/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/MotionPathPlugin.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+
+    <script src="./assets/js/main.js" defer></script>
+
+</head>
+<body>
+    <div id="wrap">
+        <div class="loading-area">
+            <ul class="loading-col">
+                <li>
+                    <div class="loading-icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 45 60" fill="none" class="transition_logo_svg"><g clip-path="url(#clip0_2527_894)"><path d="M36.9678 0V25.5443H7.8365V25.5137H3.08194L7.8365 20.7375V0H0V59.9848H7.8365V32.823H36.9678V59.9848H44.7889V0H36.9678Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2527_894"><rect width="44.7889" height="59.9848" fill="currentColor"></rect></clipPath></defs></svg></div>
+                </li>
+                <li>
+                    <div class="loading-icon-box"> <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 38 60" fill="none" class="transition_logo_svg"><g clip-path="url(#clip0_2527_896)"><path d="M7.82101 52.9502H3.40718L7.82101 48.5097V32.5636H34.7067V25.5443H7.82101V7.01933H37.4015V0H0V59.9848H37.4015V52.9654H7.82101V52.9502Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2527_896"><rect width="37.4015" height="59.9848" fill="currentColor"></rect></clipPath></defs></svg></div>
+                </li>
+                <li> 
+                    <div class="loading-icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 51 60" fill="none" class="transition_logo_svg"><g clip-path="url(#clip0_2527_898)"><path d="M0 0H8.34758L25.275 59.9542L42.0941 0H50.4417L32.523 60H17.9032L0 0Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2527_898"><rect width="50.4417" height="60" fill="currentColor"></rect></clipPath></defs></svg></div>
+                </li>
+                <li>
+                    <div class="loading-icon-box"><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 52 60" fill="none" class="transition_logo_svg"><g clip-path="url(#clip0_2527_900)"><path d="M33.0496 0H18.9563L0 60H8.4405L13.1331 44.4812H38.7024L43.395 60H51.8355L33.0496 0ZM15.2239 37.6144H11.2282L16.7416 32.3805L26.1113 0.0457782L36.6116 37.6297H15.2084L15.2239 37.6144Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2527_900"><rect width="51.8355" height="60" fill="currentColor"></rect></clipPath></defs></svg></div>
+                </li>
+            </ul>
+ 
+        </div>
+        <header id="header">
+            <div class="header-left">
+                <h1>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 134 32" fill="none" class="nav_brand_logo"><path d="M67.5679 1.73193H71.7064L80.0987 31.4559L88.4372 1.73193H92.5758L83.6921 31.4786H76.4439L67.5679 1.73193Z" fill="currentColor"></path><path d="M18.3279 1.73193V14.3962H3.88517V14.3811H1.52796L3.88517 12.0132V1.73193H0V31.4711H3.88517V18.0049H18.3279V31.4711H22.2054V1.73193H18.3279Z" fill="currentColor"></path><path d="M41.0862 27.9835H38.8979L41.0862 25.782V17.8763H54.4156V14.3962H41.0862V5.21197H55.7516V1.73193H37.2087V31.4711H55.7516V27.9911H41.0862V27.9835Z" fill="currentColor"></path><path d="M116.97 1.73193H109.983L100.585 31.4786H104.769L107.096 23.7847H119.773L122.099 31.4786H126.284L116.97 1.73193ZM108.132 20.3804H106.151L108.885 17.7855L113.53 1.75463L118.736 20.3879H108.125L108.132 20.3804Z" fill="currentColor"></path></svg>
+                        <span class="blind">heva</span>
+                    </a>
+                </h1>
+            </div>
+            <div class="header-right" id="gnb">
+                <div class="mo-show">
+                    <a href="javascript:void(0)" class="mo-menu">MENU</a>
+                </div>
+                <div class="pc-show">
+                    <nav>
+                        <ul class="nav-list">
+                            <li><a href="#">TREATMENTS</a></li>
+                            <li><a href="#">ABOUT</a></li>
+                            <li><a href="#">CONTACT</a></li>
+                            <li><a href="#">LOGIN</a></li>
+                        </ul>
+                    </nav>
+                    <a href="#" class="link-go">
+                        <div class="link-go-text-box">
+                            <span class="link-go-text">GET STARTED</span>
+                            <span class="link-go-text" aria-hidden="true">GET STARTED</span>
+                        </div>
+                        <div class="link-go-bg"></div>
+                        <i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" style="transform: translate3d(0%, 0%, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                        </i>
+                    </a> 
+                </div>   
+            </div>        
+        </header>
+        <div class="mo-menu-dim">
+            <div class="mo-menu-wrap">
+                <div class="close-box text-right">
+                    <a href="javascript:void(0)" class="btn-close">CLOSE</a>
+                </div>
+                <ul class="menu-list">
+                    <li><a href="#"><span class="text">TREATMENTS</span><i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                    </i></a></li>
+                    <li><a href="#"><span class="text">ABOUT</span><i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                    </i></a></li>
+                    <li><a href="#"><span class="text">CONTACT</span><i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                    </i></a></li>
+                    <li><a href="#"><span class="text">LOGIN</span><i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                    </i></a></li>
+                    <li><a href="#"><span class="text">PARTNERS</span><i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                    </i></a></li>
+                </ul>
+                <a href="#" class="link-go">
+                    <div class="link-go-text-box">
+                        <span class="link-go-text">GET STARTED</span>
+                        <span class="link-go-text" aria-hidden="true">GET STARTED</span>
+                    </div>
+                    <div class="link-go-bg"></div>
+                    <i>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon" ><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                    </i>
+                </a>
+                <div class="badge">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 158 164" fill="none" class="badge-border"><g clip-path="url(#clip0_2394_318)"><path d="M4.93927 50.269L3.84638 53.1677L12.4617 56.3635L11.8514 58.0037L3.23607 54.808L2.14318 57.7068L0.610306 57.1412L3.40639 49.6892L4.93927 50.2548V50.269Z" fill="currentColor"></path><path d="M9.08372 38.8718L18.5223 44.1462L17.6565 45.6733L13.7107 43.4674L11.9366 46.6066L15.8823 48.8125L15.0165 50.3397L5.57797 45.0653L6.44376 43.5381L10.5172 45.8147L12.2914 42.6756L8.21793 40.399L9.08372 38.8718Z" fill="currentColor"></path><path d="M16.0101 32.0279L21.9713 36.6518L23.5325 34.658L24.8241 35.662L20.6371 41.0212L19.3455 40.0172L20.8926 38.0376L14.9314 33.4137L13.3843 35.3933L12.0927 34.3893L16.2797 29.0302L17.5713 30.0341L16.0101 32.0279Z" fill="currentColor"></path><path d="M24.9377 30.5715L26.2009 29.3696C27.2228 30.4442 27.9608 30.317 28.9686 29.3696L29.0253 29.313C29.9905 28.3939 30.1608 27.701 29.4086 26.9233C28.5286 26.0042 27.2512 26.8385 26.1157 27.3475C24.3273 28.1676 22.979 28.2808 21.8151 27.0081C20.5235 25.5941 20.8784 23.8831 22.2409 22.6105L22.3119 22.5398C23.859 21.0833 25.6615 20.8571 27.3363 22.6105L26.0731 23.8124C25.037 22.7236 24.3415 22.8226 23.4048 23.6993L23.3338 23.77C22.5816 24.477 22.468 25.1557 23.1067 25.8203C23.859 26.6122 24.7815 26.2021 25.7893 25.7072C27.6486 24.774 29.295 24.2932 30.686 25.7496C32.1053 27.2344 31.6937 29.0019 30.1182 30.4867L30.0614 30.5432C28.4434 32.0704 26.5841 32.3391 24.9377 30.5998V30.5715Z" fill="currentColor"></path><path d="M44.5812 9.43158L47.8883 16.1907L50.1734 15.0877L50.883 16.5583L44.7515 19.5419L44.0277 18.0713L46.2986 16.9684L42.9916 10.2093L40.7206 11.3122L39.9968 9.84165L46.1283 6.85803L46.8521 8.32863L44.567 9.43158H44.5812Z" fill="currentColor"></path><path d="M53.1965 12.0334L54.8572 11.5102C55.2972 12.9243 56.021 13.1364 57.3552 12.7263L57.4262 12.698C58.7035 12.3021 59.1577 11.7506 58.8313 10.7184C58.4481 9.51643 56.9294 9.68612 55.6946 9.65784C53.7217 9.61542 52.4727 9.1205 51.9759 7.46608C51.4366 5.62783 52.5153 4.25622 54.3036 3.6906L54.3888 3.66232C56.4184 3.02601 58.15 3.6199 58.8739 5.92478L57.2133 6.44797C56.7591 5.0198 56.092 4.79355 54.8714 5.17534L54.7862 5.20362C53.8069 5.51471 53.3953 6.06618 53.6649 6.94289C53.9914 7.98927 54.9991 8.01756 56.1346 8.01756C58.221 8.00341 59.91 8.28622 60.5061 10.1952C61.1164 12.1607 59.9809 13.5606 57.9087 14.1969L57.8378 14.2252C55.7088 14.8898 53.9204 14.31 53.2107 12.0193L53.1965 12.0334Z" fill="currentColor"></path><path d="M78.4465 6.39145L75.0968 0L77.0129 0.0282807L79.2697 4.6239H79.44L81.8245 0.113123L83.7264 0.141404L80.1922 6.46215L80.1213 10.8739L78.3755 10.8457L78.4465 6.40559V6.39145Z" fill="currentColor"></path><path d="M86.8489 7.35305L87.3315 4.19975C87.7289 1.58378 89.4321 0.523251 91.5611 0.848479H91.6604C93.7894 1.18785 95.1094 2.71501 94.712 5.31684L94.2294 8.47014C93.832 11.0861 92.1288 12.1466 89.9998 11.8214H89.9005C87.7715 11.482 86.4515 9.95488 86.8489 7.35305ZM90.2269 10.266C91.5327 10.4639 92.214 9.96902 92.4836 8.21561L92.9662 5.06231C93.2359 3.29476 92.7249 2.63017 91.4191 2.4322H91.3198C90.014 2.2201 89.3327 2.71501 89.0631 4.48255L88.5805 7.63586C88.3108 9.4034 88.8218 10.068 90.1275 10.266H90.2269Z" fill="currentColor"></path><path d="M98.3171 9.71441L100.517 2.77148L102.192 3.29468L99.9919 10.2376C99.5235 11.7365 99.7648 12.3587 101.028 12.7546L101.113 12.7829C102.376 13.1788 102.958 12.8111 103.427 11.3123L105.627 4.36935L107.287 4.89254L105.087 11.8355C104.363 14.1262 102.689 14.9322 100.631 14.2817L100.545 14.2535C98.4874 13.603 97.5791 11.991 98.3029 9.70027L98.3171 9.71441Z" fill="currentColor"></path><path d="M113.788 15.1584L113.731 15.2716L114.143 19.853L112.397 18.9905L112.014 14.3949L111.077 13.9282L109.317 17.4775L107.756 16.7139L112.539 7.04187L115.803 8.63973C117.89 9.67198 118.486 11.2133 117.478 13.2354L117.45 13.2919C116.612 14.9746 115.392 15.5968 113.802 15.1584H113.788ZM115.065 10.0962L113.376 9.26191L111.787 12.4859L113.476 13.3202C114.753 13.9424 115.321 13.6737 115.888 12.5283L115.917 12.4718C116.499 11.3123 116.357 10.7325 115.079 10.0962H115.065Z" fill="currentColor"></path><path d="M132.253 31.9007L131.118 33.0744L126.321 28.507L133.8 20.7157L135.078 21.9318L128.733 28.5495L132.253 31.9007Z" fill="currentColor"></path><path d="M143.537 33.6965L137.562 38.2921L139.109 40.3001L137.817 41.2899L133.658 35.9024L134.95 34.9126L136.483 36.9064L142.458 32.3108L140.925 30.317L142.217 29.3271L146.376 34.7146L145.084 35.7045L143.537 33.6965Z" fill="currentColor"></path><path d="M148.888 41.7L146.333 43.1282L148.448 46.8895L147.029 47.6814L144.914 43.92L140.869 46.1684L140.003 44.6412L149.441 39.381L152.819 45.3906L151.4 46.1825L148.888 41.7Z" fill="currentColor"></path><path d="M154.168 52.5314L151.414 53.5637L152.777 57.1836L151.258 57.7492L149.896 54.1293L147.085 55.1757L148.86 59.8844L147.327 60.45L144.942 54.101L155.076 50.3114L157.461 56.6604L155.928 57.226L154.154 52.5173L154.168 52.5314Z" fill="currentColor"></path><path d="M4.05929 105.134L7.06827 104.045C9.5663 103.154 11.3121 104.13 12.0501 106.152L12.0785 106.237C12.8166 108.259 12.0785 110.125 9.59468 111.03L8.99856 109.376C10.6876 108.768 11.0282 108.004 10.5882 106.774L10.5598 106.689C10.1198 105.459 9.3534 105.091 7.66439 105.699L4.65541 106.788C2.9664 107.396 2.62576 108.16 3.06576 109.39L3.09414 109.475C3.54833 110.705 4.30058 111.073 5.98958 110.465L6.5857 112.119C4.08768 113.024 2.3419 112.034 1.60385 110.012L1.57546 109.927C0.837407 107.905 1.57546 106.039 4.05929 105.134Z" fill="currentColor"></path><path d="M8.50179 116.29L11.3121 114.763C13.6398 113.491 15.5275 114.198 16.5494 116.078L16.592 116.163C17.6281 118.044 17.2023 120.009 14.8746 121.268L12.0643 122.795C9.73661 124.068 7.86309 123.361 6.82698 121.48L6.7844 121.395C5.74829 119.514 6.17409 117.549 8.4876 116.276L8.50179 116.29ZM8.21792 120.73C8.85662 121.876 9.65145 122.13 11.2269 121.268L14.0372 119.741C15.6126 118.878 15.8397 118.072 15.201 116.927L15.1585 116.842C14.5198 115.697 13.7249 115.442 12.1495 116.305L9.3392 117.832C7.76374 118.694 7.53664 119.5 8.17534 120.646L8.21792 120.73Z" fill="currentColor"></path><path d="M20.1971 122.456L21.4035 124.025L18.9907 128.013L19.09 128.14L23.5751 126.839L24.7815 128.409L16.2088 134.984L15.1869 133.669L21.3893 128.904L21.29 128.762L17.3584 129.865L16.8617 129.229L18.9481 125.736L18.8345 125.595L12.6321 130.36L11.6101 129.045L20.1829 122.47L20.1971 122.456Z" fill="currentColor"></path><path d="M27.6344 133.697L25.6047 135.804L28.415 138.477L27.2937 139.636L24.4835 136.964L22.4112 139.127L26.0589 142.606L24.9235 143.779L19.9984 139.099L27.4783 131.307L32.4033 135.988L31.2679 137.162L27.6202 133.683L27.6344 133.697Z" fill="currentColor"></path><path d="M45.6599 153.564L42.807 152.165L40.7774 154.568L39.1026 153.748L46.4831 145.349L48.8534 146.508L46.625 157.425L44.9928 156.619L45.6741 153.55L45.6599 153.564ZM46.0147 151.938L47.0083 147.442L46.8521 147.371L43.8715 150.892L46.0005 151.938H46.0147Z" fill="currentColor"></path><path d="M58.4481 159.772L57.9655 161.327L51.6353 159.348L54.8714 149.054L56.5462 149.577L53.7927 158.316L58.4339 159.772H58.4481Z" fill="currentColor"></path><path d="M68.8092 154.102L67.6737 161.54L70.1859 161.921L69.9447 163.533L63.2028 162.501L63.4441 160.889L65.9421 161.271L67.0776 153.833L64.5796 153.451L64.8209 151.839L71.5627 152.871L71.3214 154.483L68.8092 154.102Z" fill="currentColor"></path><path d="M74.9407 153.267L76.8142 153.239L79.2413 162.36H79.4116L81.498 153.168L83.329 153.14L80.6748 163.972L78.0348 164.014L74.9549 153.282L74.9407 153.267Z" fill="currentColor"></path><path d="M88.9495 154.201L89.4037 157.085L93.2501 156.491L93.4914 158.089L89.645 158.683L90.0992 161.639L95.081 160.875L95.3365 162.487L88.6089 163.519L86.9625 152.871L93.6901 151.839L93.9456 153.451L88.9637 154.215L88.9495 154.201Z" fill="currentColor"></path><path d="M110.339 147.894L111.645 150.51L115.534 148.587L116.257 150.029L112.368 151.938L114.427 156.067L112.851 156.845L108.054 147.187L114.256 144.133L114.98 145.589L110.353 147.866L110.339 147.894Z" fill="currentColor"></path><path d="M121.168 148.134L119.323 145.519C117.805 143.355 118.287 141.404 120.047 140.173L120.118 140.117C121.878 138.873 123.893 139.085 125.412 141.234L127.257 143.85C128.776 146.013 128.293 147.951 126.533 149.195L126.462 149.252C124.702 150.496 122.687 150.284 121.168 148.134ZM125.625 147.908C126.704 147.159 126.86 146.324 125.824 144.868L123.979 142.252C122.943 140.796 122.119 140.654 121.041 141.418L120.955 141.474C119.877 142.224 119.721 143.058 120.757 144.515L122.602 147.131C123.638 148.587 124.461 148.728 125.54 147.965L125.625 147.908Z" fill="currentColor"></path><path d="M134.255 137.303L134.34 137.388L138.796 138.576L137.391 139.919L132.92 138.703L132.168 139.424L134.922 142.28L133.658 143.482L126.164 135.691L128.79 133.188C130.479 131.576 132.126 131.562 133.701 133.188L133.744 133.231C135.049 134.588 135.206 135.946 134.269 137.289L134.255 137.303ZM129.926 134.362L128.563 135.663L131.061 138.25L132.424 136.95C133.46 135.96 133.389 135.352 132.495 134.418L132.452 134.376C131.558 133.443 130.962 133.372 129.926 134.362Z" fill="currentColor"></path><path d="M143.651 116.248L150.279 119.868L151.499 117.648L152.933 118.426L149.654 124.379L148.221 123.601L149.441 121.395L142.813 117.775L141.593 119.981L140.159 119.203L143.438 113.25L144.871 114.028L143.651 116.248Z" fill="currentColor"></path><path d="M149.214 103.112L148.15 106.024L156.794 109.149L156.197 110.804L147.554 107.679L146.489 110.592L144.956 110.04L147.681 102.56L149.214 103.112Z" fill="currentColor"></path><path d="M154.466 77.7155L150.932 81.3071L154.466 84.8988L158 81.3071L154.466 77.7155Z" fill="currentColor"></path><path d="M3.53414 77.7155L0 81.3071L3.53414 84.8988L7.06827 81.3071L3.53414 77.7155Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2394_318"><rect width="158" height="164" fill="currentColor"></rect></clipPath></defs></svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 158 164" fill="none" class="badge-center"><g clip-path="url(#clip0_2394_318)"><path d="M96.3868 46.0977V76.6974H61.8829V76.6691H56.2481L61.8829 70.9423V46.0977H52.6004V117.959H61.8829V85.422H96.3868V117.959H105.655V46.0977H96.3868Z" fill="currentColor"></path></g><defs><clipPath id="clip0_2394_318"><rect width="158" height="164" fill="currentColor"></rect></clipPath></defs></svg>
+                </div>
+            </div>
+        </div>
+        <main id="container">
+            <section class="mhero main-hero">
+                <div class="mhero-area content">
+                    <div class="mhero-txt-wrap txt-area">
+                        <p class="mhero-para desc">Heva delivers custom, connected wellness journeys. Witness your progress and plot new goals as you up-level your health.</p>
+                        <a href="#" class="mhero-btn-go spaceMono">
+                            <span>START TODAY</span>
+                            <div class="mhero-btn-bg"></div>
+                        </a>
+                    </div>
+                    <div class="mmarquee marquee"><h3>Take a walk on the <span class="italic">wellness side</span></h3><h3>Take a walk on the <span class="italic">wellness side</span></h3></div>
+                </div>
+                <div class="mhero-movie video-area">
+                    <video src="https://storage.googleapis.com/evirts-marketing-bucket/Heva/Home_Hero.mp4" autoplay="true" muted loop playsinline="true" preload="auto" poster=""></video>
+                </div>
+            </section>
+            <section class="mphoto">
+                <div class="inner">
+                    <div class="mphoto-txt-wrap text-center">
+                        <!-- span -->
+                        <small class="men-tit">(HEVA HAPPY)</small>
+                        <h2 class="mh2 split-word" data-splitting="words">Data<span class="italic">-into-</span>action</h2>
+                        <p class="mphoto-para split-line">No more dismissal.<br />
+                            No more one-size-fits-all.<br />
+                            No two lives are alike, so Heva builds your health plan
+                            around you.<br /><br />
+                            ‍
+                            Your unique health factors help us pinpoint wellness
+                            needs with precision, and our doctors distill your
+                            distinct data into actionable treatment plans.
+                        </p>
+                    </div>
+                    <div class="mphoto-bg">
+                        <ul class="mphoto-list">
+                            <li><div class="thumb"><video src="https://storage.googleapis.com/evirts-marketing-bucket/Heva/Home_1.mp4" autoplay="true" muted="" loop="" playsinline="true" preload="auto"></video></div></li>
+                            <li><div class="thumb"><img src="https://cdn.prod.website-files.com/663943bed8a37337f94a3f67/6647873f9a00a00b9980599a_Home_2.webp" alt=""></div></li>
+                            <li><div class="thumb"><img src="https://cdn.prod.website-files.com/663943bed8a37337f94a3f67/6647873f3ff3ce624cfa79d5_Home_1.webp" alt=""></div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="mdescr">
+                <div class="inner">
+                    <div class="left-wrap col-left">
+                        <small class="men-tit">(CUSTOM WELLNESS)</small>
+                        <h2 class="mh2 split-line">
+                            Vitality is vital. Meet <br class="pc-show"/>
+                            your one-of-a-kind<br class="pc-show"/>
+                            <i class="italic">wellness journey.</i>
+                        </h2>
+                    </div>
+                    <div class="right-wrap col-right">
+                        <p class="split-line" data-motion="split-line">
+                            We know firsthand that well-being affects everything, <br />
+                            from your energy and outlook to your ability to show<br />
+                            up in relationships. This is your life. Make it a lively one.
+                        </p>
+                        <div class="mdescr-pic-area pic-area">
+                            <span class="mdescr-thumb"><img src="https://cdn.prod.website-files.com/663943bed8a37337f94a3f67/663a47479217b37a3d305305_science-profile_img_2.webp" alt=""></span>
+                            <div class="mdescr-movie video-wrap">
+                                <div class="mdescr-movie-head video-head">
+                                    <h3><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 83 19" fill="none" class="science_mobile_nav_logo"><path d="M41.7524 0.74054H44.285L49.4205 18.9298L54.5232 0.74054H57.0557L51.6195 18.9437H47.184L41.7524 0.74054Z" fill="currentColor"></path><path d="M11.6203 0.74054V8.49031H2.78227V8.48105H1.3398L2.78227 7.03202V0.74054H0.404785V18.9391H2.78227V10.6986H11.6203V18.9391H13.9931V0.74054H11.6203Z" fill="currentColor"></path><path d="M25.5471 16.8049H24.208L25.5471 15.4577V10.6199H33.7039V8.49031H25.5471V2.87011H34.5214V0.74054H23.1743V18.9391H34.5214V16.8095H25.5471V16.8049Z" fill="currentColor"></path><path d="M71.9833 0.74054H67.7076L61.9565 18.9437H64.5173L65.9409 14.2355H73.6983L75.122 18.9437H77.6827L71.9833 0.74054ZM66.5753 12.1522H65.363L67.0357 10.5643L69.8784 0.754428L73.064 12.1569H66.5706L66.5753 12.1522Z" fill="currentColor"></path></svg></h3>
+                                    <span class="spaceMono">MENU</span>
+                                </div>
+                                <video src="https://storage.googleapis.com/evirts-marketing-bucket/Heva/Home_Hero.mp4" autoplay="true" muted="" loop="" playsinline="true" preload="auto"></video>
+                                <div class="mmarquee" data-motion="marquee"><h3>Take a walk on the <span class="italic">wellness side</span></h3><h3>Take a walk on the <span class="italic">wellness side</span></h3></div>
+                                
+                            </div>
+                            <div class="mdescr-pic-graph-wrap">
+                                <div class="mdescr-pic-graph-row1">
+                                    <span class="mdescr-pic-num">97%</span>
+                                    <div class="mdescr-pic-time-box">
+                                        Today  
+                                        <span class="mdescr-pic-hour">2</span>
+                                        <span class="mdescr-pic-blink">:</span>
+                                        <span class="mdescr-pic-min">38</span>
+                                        <span class="mdescr-pic-am">pm</span>
+                                    </div>
+                                </div>
+                                <div class="mdescr-pic-graph-box">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 198 62" fill="none" class="science_data_visual_graph"><path d="M1.8396 60.5157C8.33074 49.3396 20.5573 42.8767 34.0563 44.9879C39.9532 45.8208 45.566 48.1645 50.4553 50.3403C55.9905 52.7873 61.6937 55.3635 67.7844 53.9366C75.6965 52.3548 85.5526 43.2253 92.089 34.0313C101.009 22.5581 106.712 7.34024 120.224 2.57536C135.299 -1.25333 146.246 14.2035 156.871 23.772C163.782 30.5771 172.805 36.4331 182.526 31.9975C188.203 29.4859 192.136 24.5274 196.277 19.7238" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" id="science-data-graph"></path></svg>
+                                    <span class="mdescr-pic-graph-dot"></span>
+                                    <ul class="mdescr-pic-graph-line">
+                                        <li></li>
+                                        <li></li>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <h4 class="split-line">Simplicity is key. Support is power.</h4>
+                        <p class="split-line"> Your body’s needs are unique, and   Heva’s responsive
+                            approach takes the mystery and inflexibility out of
+                            up-leveling your health. Your pathway, treatment, and
+                            dose can all be tailored with provider insight.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="marticle main-life">
+                <div class="inner">
+                    <h2 class="headline mh2 split-word" data-splitting="words">Live the <br class="mo-show"><span class="italic">Heva</span> Life</h2>
+
+                    <div class="marticle-group content">
+                        <div class="left-wrap col-left">
+                            <img class="marticle-pic-anim" src="https://cdn.prod.website-files.com/663943bed8a37337f94a3f67/66478740b40605eeef1a1a7b_Home_Last.webp" alt="">
+                        </div>
+                        <div class="right-wrap col-right">
+                            <p class="marticle-para split-line">
+                                When you’re living and loving your new
+                                normal, we’re here to support and enhance
+                                it. And we’re here when you’re ready for
+                                your next level of health and happiness
+                                (and the next). Feeling good should be an
+                                ever-expanding journey.
+                            </p>
+                            <ol class="marticle-table">
+                                <li>
+                                    <!-- span -->
+                                    <div role="rowheader">/01</div>
+                                    <div class="marticle-rowdesc split-line">
+                                        Pick your wellness path and get all your burning questions answered.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div role="rowheader">/02</div>
+                                    <div class="marticle-rowdesc split-line">
+                                        Tell us a little about your health factors, history, and goals.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div role="rowheader">/03</div>
+                                    <div class="marticle-rowdesc split-line">
+                                        Heva providers will review your profile and assemble your custom treatment plan.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div role="rowheader">/04</div>
+                                    <div class="marticle-rowdesc split-line">
+                                        We’ll get you started down your path to feeling Heva Healthy & Happy.
+                                    </div>
+                                </li>
+                                <li>
+                                    <div role="rowheader">/05</div>
+                                    <div class="marticle-rowdesc split-line">
+                                        You’ll have a wealth of health support all along the way.
+                                    </div>
+                                </li>
+                            </ol>
+                        </div>
+                        <div class="marticle-bg">
+                            <video src="https://storage.googleapis.com/evirts-marketing-bucket/Heva/Liquid_Cream.mp4" autoplay="true" muted="" loop="" playsinline="true" preload="auto"></video>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </section>
+            <section class="mfaq">
+                <div class="inner">
+                    <div class="left-wrap col-left">
+                        <h2 class="mh2 split-line">Your answers to <br/>
+                            <span class="italic">popular questions</span></h2>
+                    </div>
+                    <div class="right-wrap col-right">
+                        <ul class="mfaq-list">
+                            <li aria-expanded="false">
+                                <div class="mfaq-list-question">
+                                    <!-- a -->
+                                    <h4>So, what exactly is Heva Health?</h4>
+                                </div>
+                                <div class="mfaq-list-answer answer">
+                                    <p class="mfaq-list-para desc">
+                                        We’re a system for vital wellness support, a telehealth platform, and a place where you can receive provider care, assessment, treatment, and medication, all direct-to-consumer, all with discretion and convenience.
+                                    </p>
+                                </div>
+                            </li>
+                            <li aria-expanded="false">
+                                <div class="mfaq-list-question">
+                                    <h4>What medications and treatments does Heva offer?</h4>
+                                </div>
+                                <div class="mfaq-list-answer">
+                                    <p class="mfaq-list-para">
+                                        We’re ever-expanding Heva wellness journeys and areas of treatment. Our primary treatment pathways currently include healthy weight loss, libido revitalization, and hormone support. The medications we offer include semaglutide, tirzepatide, testosterone support, proprietary libido blends(coming soon), and more.
+                                    </p>
+                                </div>
+                            </li>
+                            <li aria-expanded="false">
+                                <div class="mfaq-list-question">
+                                    <h4>Who is Heva Health for?</h4>
+                                </div>
+                                <div class="mfaq-list-answer">
+                                    <p class="mfaq-list-para">
+                                        Heva is for people who want support and results on their wellness journeys, people ready to lose weight, get in shape, have better inside-out health, develop more energy, or find out how it feels to live with hormone harmony. If you have wellness goals you’ve been struggling to hit (or you just don’t know how to get started), Heva is for you.
+                                    </p>
+                                </div>
+                            </li>
+                            <li aria-expanded="false">
+                                <div class="mfaq-list-question">
+                                    <h4>What is the Heva journey and user experience like?</h4>
+                                </div>
+                                <div class="mfaq-list-answer">
+                                    <p class="mfaq-list-para">
+                                        After you fill out an intake form for your desired wellness path, one of our providers will lay out a recommended treatment plan based on your answers and health goals. Your provider is here to answer questions and adjust treatment as necessary, and you'll have access to educational resources for your journey.
+                                    </p>
+                                </div>
+                            </li>
+                            <li aria-expanded="false">
+                                <div class="mfaq-list-question">
+                                    <h4>Is this safe? What medical regulations are treatments under?</h4>
+                                </div>
+                                <div class="mfaq-list-answer">
+                                    <p class="mfaq-list-para">
+                                        Yes! Our primary pharmacy partner adheres to state and federal regulations and goes above and beyond with <strong>weekly</strong> potency tests to ensure safe, highest-quality medications. Heva only sources medications from FDA-inspected pharmacies that undergo rigorous assessment, quality assurance, and certification. They are held to the following<strong> best practices:</strong><br><br>All state and federal regulations (FDA guidance).<br>&zwj;<br>Vetting pharmaceutical ingredients through a rigorous qualification process.<br><br>Constantly testing raw materials, active ingredients, and finished compounded products via third-party analytical assessment, ensuring sterility and potency.<br><br>Continuous training for all pharmacists and staff to demonstrate proficiency and cultivate mastery in their roles.<br><br>An internal quality assurance program that regularly monitors and audits processes and procedures.<br><br>Integral and unwavering commitment to sanitizing equipment and facilities, preventing cross-contamination, and maintaining aseptic conditions.<br>&zwj;<br>&zwj;<strong>Weekly</strong> potency tests and extra quality assurance measures.
+                                    </p>
+                                </div>
+                            </li>
+                            <li aria-expanded="false">
+                                <div class="mfaq-list-question">
+                                    <h4>Will my health data be kept safe and secure?</h4>
+                                </div>
+                                <div class="mfaq-list-answer">
+                                    <p class="mfaq-list-para">
+                                        We’ve created Heva to be tech-forward and consumer-conscious. Your trust and security are critical to us, and we’ve developed our platform with rigorous security protocols and adherence to privacy laws. Read up on our <a href="#"><strong>Security and Privacy</strong></a> for more details!
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            
+        </main>
+        <footer id="footer">
+            <h2 class="blind">heva</h2>
+            <div class="footer-cont content">
+                <h2>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 134 31" fill="none" class="footer_logo_svg"><path d="M67.5679 1.21045H71.7064L80.0987 30.9345L88.4372 1.21045H92.5758L83.6921 30.9572H76.4439L67.5679 1.21045Z" fill="currentColor"></path><path d="M18.3279 1.21045V13.8747H3.88517V13.8596H1.52796L3.88517 11.4917V1.21045H0V30.9496H3.88517V17.4834H18.3279V30.9496H22.2054V1.21045H18.3279Z" fill="currentColor"></path><path d="M41.0862 27.462H38.8979L41.0862 25.2605V17.3548H54.4156V13.8747H41.0862V4.69048H55.7516V1.21045H37.2087V30.9496H55.7516V27.4696H41.0862V27.462Z" fill="currentColor"></path><path d="M116.97 1.21045H109.983L100.585 30.9572H104.769L107.096 23.2633H119.773L122.099 30.9572H126.284L116.97 1.21045ZM108.132 19.8589H106.151L108.885 17.264L113.53 1.23315L118.736 19.8664H108.125L108.132 19.8589Z" fill="currentColor"></path></svg>
+                </h2>
+                <nav class="nav">
+                    <ul class="msubscribe-nav nav-list">
+                        <li><a href="#"><span class="msubscribe-nav-text">Home</span><span class="msubscribe-nav-text">Home</span></a></li>
+                        <li><a href="#"><span class="msubscribe-nav-text">About</span><span class="msubscribe-nav-text">About</span></a></li>
+                        <li><a href="#"><span class="msubscribe-nav-text">Treatments</span><span class="msubscribe-nav-text">Treatments</span></a></li>
+                        <li><a href="#"><span class="msubscribe-nav-text">Contact</span><span class="msubscribe-nav-text">Contact</span></a></li>
+                        <li><a href="#"><span class="msubscribe-nav-text">Partners</span><span class="msubscribe-nav-text">Partners</span></a></li>
+                    </ul>
+                </nav>
+                <div class="msubscribe-form">
+                    <form action="" method="post" aria-label="Email Form">
+                        <fieldset>
+                            <legend class="blind"></legend>
+                        </fieldset>
+                        <input type="text" class="msubscript-email" placeholder="Email Address">
+                        <button class="msubscribe-btn-subs btn-sub">
+                            <div class="msubscribe-btn-subs-bg"></div>
+                            <div class="msubscribe-btn-subs-text-box">
+                                <span class="msubscribe-btn-subs-text">subscribe</span>
+                                <span class="msubscribe-btn-subs-text">subscribe</span>
+                            </div>
+                            <i>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg><svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 14 14" fill="none" class="link_button_icon_ab"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.25006 2.25H11.0001C11.4143 2.25 11.7501 2.58579 11.7501 3V9.75C11.7501 10.1642 11.4143 10.5 11.0001 10.5C10.5858 10.5 10.2501 10.1642 10.2501 9.75V4.81066L2.53039 12.5303L1.46973 11.4697L9.1894 3.75H4.25006C3.83584 3.75 3.50006 3.41421 3.50006 3C3.50006 2.58579 3.83584 2.25 4.25006 2.25Z" fill="currentColor"></path></svg>
+                            </i>
+                        </button>
+                    </form>
+                    <i><img src="" alt=""></i>
+                </div>
+            </div>
+            <div class="mmarquee"><h3>Take a walk on the <span class="italic">wellness side</span></h3><h3>Take a walk on the <span class="italic">wellness side</span></h3></div>
+            <div class="mfooter">
+                <div class="inner">
+                    <small class="left-wrap copy">
+                        ⓒ 2024 HEVA HEALTH
+                    </small>
+                    <div class="right-wrap policy">
+                        <a href="#" class="mfooter-privacy">Privacy Policy</a>
+                    </div>
+                    <!-- 
+                        div.col-left
+                            .copy
+                     -->
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
